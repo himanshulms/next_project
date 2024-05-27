@@ -1,0 +1,15 @@
+@use './var';
+
+.max-w-268 {
+    max-width: 268px;
+}
+.max-w-428 {
+    max-width: 428px;
+}
+.productDetails{
+    .barcode{
+        img{
+            width: 46px;
+        }
+    }
+}

@@ -1,0 +1,106 @@
+@use '../../assets/sass/var';
+
+label {
+    &.inputLabel {
+        font-size: var.$text-sm;
+        font-weight: var.$font-normal;
+        line-height: var.$lheight-sm;
+        color: oklch(var(--b3));
+    }
+}
+
+.inputField {
+    input {
+        font-size: var.$text-base;
+        font-weight: var.$font-normal;
+        line-height: var.$lheight-xl;
+        min-height: 56px;
+        max-height: 56px;
+        border: 1px solid oklch(var(--nc));
+        color: oklch(var(--inc));
+
+        &::placeholder {
+            color: oklch(var(-b3));
+        }
+
+        &:focus-visible {
+            outline: none;
+        }
+
+        &.input-sm {
+            min-height: 40px;
+            max-height: 40px;
+            font-size: var.$text-sm;
+            font-weight: var.$font-normal;
+            line-height: var.$lheight-sm;
+        }
+
+        &.otp-input {
+            width: 55px;
+            text-align: center;
+        }
+
+        &:disabled{
+            background: rgba(244,244,244);
+        }
+    }
+
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        color: rgba(0, 0, 0, 0);
+        opacity: 1;
+        display: block;
+        background: url(../../assets/images/svg/calendar.svg) no-repeat;
+        width: 20px;
+        height: 20px;
+    }
+
+    textarea {
+        font-size: var.$text-base;
+        font-weight: var.$font-normal;
+        line-height: 30px;
+        min-height: 83px;
+        border: 1px solid oklch(var(--nc));
+        color: oklch(var(--inc));
+
+        &:focus-visible {
+            outline: none;
+        }
+    }
+
+}
+
+.selectField {
+    label {
+        font-size: var.$text-sm;
+        font-weight: var.$font-normal;
+        line-height: var.$lheight-sm;
+    }
+
+    select {
+        font-size: var.$text-base;
+        font-weight: var.$font-normal;
+        line-height: var.$lheight-base;
+        min-height: 56px;
+        max-height: 56px;
+        border: 1px solid oklch(var(--nc));
+        background-image: url('../../assets/images/svg/dropdown.svg');
+        background-size: 14px 11px;
+        color: oklch(var(--inc));
+
+        &:focus {
+            outline: none;
+        }
+
+        &:focus-visible {
+            outline: none;  
+        }
+
+    }
+}
+
+.checkboxField {
+    input {
+        border-radius: 0;
+        border-color: oklch(var(--nc));
+    }
+}

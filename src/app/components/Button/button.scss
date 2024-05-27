@@ -1,0 +1,23 @@
+@use '../../assets/sass/var';
+
+.btn{
+    &.btn-sm{
+        font-size: var.$text-base !important;
+        line-height: var.$lheight-base !important;
+        padding: 0.5rem 0.5rem;
+        min-height: 2.5rem;
+        max-height: 2.5rem;
+    }
+    &.btn-xsm{
+        font-size: var.$text-sm !important;
+        line-height: var.$text-xl !important;
+        padding: 0.5rem 0.5rem;
+        min-height: 1.625rem;
+        max-height: 1.625rem;
+    }
+    font-size: var.$text-lg !important;
+    font-weight: var.$font-semibold !important;
+    line-height: var.$lheight-lg !important;
+    min-height: 3.5rem;
+    max-height: 3.5rem;
+}

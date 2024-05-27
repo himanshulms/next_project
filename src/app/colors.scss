@@ -1,0 +1,21 @@
+// global color variables and classes start
+
+$light-blue : #F0F6FA;
+
+$colours: (
+    'light-blue' $light-blue,
+);
+
+// Color Function
+@each $i in $colours {
+  //bg-col1
+  .bg-#{nth($i,1)} {
+    background-color: nth($i, 2);
+  }
+  //text-col1
+  .text-#{nth($i, 1)} {
+    color: nth($i, 2) !important;
+  }
+}
+
+// global color variables and classes  end 

@@ -1,0 +1,126 @@
+.drawer-toggle ~ .drawer-side{
+    &::-webkit-scrollbar{
+        width: 1px;
+    }
+    &::-webkit-scrollbar-track{
+        box-shadow: inset 0 0 6px oklch(var(--bc));
+    }
+    
+}
+:where(.menu li:not(.menu-title, .disabled) > *:not(ul, details, .menu-title)):not(summary, .active, .btn):focus{
+    color: oklch(var(--b1)) !important;
+}
+
+ul{
+    &.side-menu{
+        li{
+            position: relative;
+            
+            &:hover{
+                a{
+                    color: oklch(var(--a));
+                    &:before{
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 5px;
+                        height: 40px;
+                        background-color: oklch(var(--a));
+                    }
+                    &:active{
+                        background: oklch(var(--bc));
+                        color: oklch(var(--a));
+                    }
+                    &:focus-visible{
+                        outline: none;
+                    }
+
+                    &.active{
+                        background: oklch(var(--bc));
+                        color: oklch(var(--a));
+                        &:before{
+                            content: '';
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            width: 5px;
+                            height: 40px;
+                            background-color: oklch(var(--a));
+                        }
+                    }
+                }
+            }
+            a{
+                &:active{
+                    background: oklch(var(--bc));
+                    color: oklch(var(--b1));
+                }
+                &:focus-visible{
+                    outline: none;
+                }
+                &.active{
+                    background: transparent !important;
+                    color: oklch(var(--a)) !important;
+                    &:before{
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 5px;
+                        height: 40px;
+                        background-color: oklch(var(--a));
+                    }
+                }
+            }
+            &:focus-visible{
+                outline: none;
+            }
+            
+            .side-sub-menu{
+                li {
+                    position: relative;
+                    &::before{
+                        content: '';
+                        position: absolute;
+                        background: url('../../assets/images/svg/rightAngle.svg');
+                        width: 14px;
+                        height: 14px;
+                        background-repeat: no-repeat;
+                        top: 14px;
+                    }
+                    a{
+                        color: oklch(var(--b1));
+                        background: oklch(var(--b2));
+                        &:before{
+                            display: none;
+                        }
+                        &:hover{
+                            background: oklch(var(--b2));
+                            color: oklch(var(--a));
+                        }
+                        &:active{
+                            background: oklch(var(--b2));
+                            color: oklch(var(--a));
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}
+
+.indicator{
+    .counter{
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            right: 0;
+            width: 8px;
+            height: 8px;
+            background-image: url(../../assets/images/svg/indicator.svg); 
+            border-radius: 50%;
+        }
+    }
+}
